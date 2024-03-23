@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="function.js"></script>
+</head>
+<body>
+    <h1>Calculadora em JavaScript</h1>
+    <p>Digite os números dentro das caixas de texto, clique no botão da operação desejada e veja a matemática acontecer!</p>
+    <input type="text" id="v1"><br>
+    <input type="text" id="v2"><br>
+    <button type="button" onclick="Soma()">Somar</button>
+    <button type="button" onclick="Subtrair()">Subtrair</button> <br>
+    <button type="button" onclick="Multiplicar()">Multiplicar</button>
+    <button type="button" onclick="Dividir()">Dividir</button>
+
+    <p id="res">Resposta: </p>
+
+    <h2>Só algumas coisas extras</h2>
+    <p id="oculto" style="display: none;">Tem nada pra ver aqui seu curioso</p>
+    <button type="button" onclick="oculto()">Clique aqui para ver legal!</button> <br>
+
+    <p id="mude">Olá!</p>
+    <button type="button" onclick="troca()">Clique aqui!</button>
+
+    <h2>Qual o valor de c?</h2>
+    <p>a = 12; <br>
+       b = 6; <br>
+       c = soma entre a e b.
+    </p>
+    <p id="valorz">O valor de C é: </p>
+    <button type="button" onclick="Z()">Valor de C</button>
+
+    <footer>
+        Alunos: Ronaldo Cesar e Felipe Leonardo <br>
+        Série: 3° II
+    </footer>
+</body>
+</html>
