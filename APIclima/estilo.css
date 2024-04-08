@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg,#594cee 0%, #8dd0f5 100%) no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(221, 238, 238); 
+    font-size: 17px;
+    height: 100vh;
+    text-align: center;
+}
+button {
+    text-align: center;
+    cursor: pointer;
+}
