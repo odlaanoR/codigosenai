@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+    background: grey;
+    margin: 0;
+}
+
+.titulo {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+header {
+    background: rgb(37, 36, 36);
+}
+
