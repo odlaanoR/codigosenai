@@ -10,9 +10,15 @@ const descElement = document.querySelector("#climatempo");
 const weatherIconElement = document.querySelector("#weather-icon");
 const umidityElement = document.querySelector("#umidade span");
 const windElement = document.querySelector("#vento span");
+const weatherContainer = document.querySelector("#dadoschuva")
 
 
 //Funções
+
+const toggleLoader = () => {
+    loader.classList.toggle("hide");
+  };
+
 
 const pegaDadosTempo = async(cidade) => {
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${chaveAPI}&lang=pt_br`;
@@ -24,6 +30,7 @@ const pegaDadosTempo = async(cidade) => {
 };
 
 const mostraDadosTempo = async(cidade) => {
+
     const data = await pegaDadosTempo(cidade);
 
     cityElement.innerText = data.name;
@@ -32,8 +39,10 @@ const mostraDadosTempo = async(cidade) => {
     weatherIconElement.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
     umidityElement.innerText = `${data.main.humidity}%`;
     windElement.innerText = `${data.wind.speed}km/h`;
+    weatherContainer.classList.remove("hide");
 
-};
+}
+
 
 //Eventos
 Btpesquisa.addEventListener("click", (e) => {
@@ -46,3 +55,11 @@ Btpesquisa.addEventListener("click", (e) => {
     mostraDadosTempo(cidade);
 
 })  
+
+armazenaCidade.addEventListener("keyup" , (e) =>{
+    if(e.code === "Enter") {
+        e.preventDefault()
+        const cidade = armazenaCidade.value
+        mostraDadosTempo(cidade)
+    }
+})

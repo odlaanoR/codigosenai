@@ -50,7 +50,7 @@ button {
     border-radius: 4px;
 }
 
-#dados-chuva {
+#dadoschuva {
     border-top: 1px solid #fff;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -58,7 +58,7 @@ button {
 }
 
 
-#dados-chuva span {
+#dadoschuva span {
     margin: 0.3rem;
 
 }
