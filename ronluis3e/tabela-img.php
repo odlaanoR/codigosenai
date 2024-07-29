@@ -39,17 +39,6 @@
 
         echo "</table>";
 
-
-         
-        
-
-
-
-
-
-
-
-
         echo "<h1>Tabela com Imagens</h1>";
         echo "<table><tr>";
         for ($x = 1;  $x <= 5; $x++) {
