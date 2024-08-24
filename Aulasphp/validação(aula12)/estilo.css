@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(27, 27, 27);
+    color: white;
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 23%;
+}
+
+input {
+    background: rgb(78, 78, 78);
+    color: white;
+}
+
+.butao {
+    cursor: pointer;
+    margin-top: 6px;
+    margin-left: 48.8%;
+}
+
+a {
+    color: white;
+    margin-left: 50%;
+    margin-top: 10%;
+}
+a:hover {
+    color: rgb(196, 26, 26);
+}
