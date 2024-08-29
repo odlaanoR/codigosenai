@@ -1,0 +1,11 @@
+SGBD - Sistema de Gerenciamento de Banco de Dados
+
+°Modelo de Banco de Dados:
+- Relacional - Sql - Maria, MySQL, Oracle, SQL Server...
+- NoSQL - Firebase, MongeDB, Redis...
+
+°Principais Grupos de Comandos SQL:
+- DDL (Data Definition Langague): Create, Alter, DROP
+- DML (Data Manipulation Language): Insert, Delete, Update
+- DQL (Data Querry Language): Select
+- DCL (Data Control Language): Grant, Revoke, Deny
