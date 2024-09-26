@@ -1,0 +1,24 @@
+CREATE TABLE livros (
+    ID_livro int(11) NOT NULL PRIMARY KEY,
+    Nome_livro varchar(255),
+    Autor varchar(255),
+    Data_Publi varchar(10),
+    Gênero varchar(255)
+);
+
+CREATE TABLE leitores (
+    ID_leitor int(11) NOT NULL PRIMARY KEY,
+    RA varchar(9),
+    Nome varchar(255),
+    Data_Nascimento varchar(10),
+    Endereço varchar(255),
+    Sexo varchar(1)
+);
+
+INSERT INTO leitores (`ID_leitor`, `RA`, `Nome`, `Data_Nascimento`, `Endereço`, `Sexo`, `Telefone`)
+VALUES
+('2599990', '234569910', 'Ronaldo Cesar', '05/05/2007', 'Paulista', 'M', '8199840781')
+('260000', '234569911', 'Benjamin Schnaiguistaiguer', '29/02/1947', 'Pomerode', 'M', '47918276543'),
+('260001', '234569912', 'Ana Tavares', '03/09/1993', 'Fortaleza', 'F', '8591876556478'),
+('260002', '234569913', 'Cláudio Neves', '04/11/1984', 'Maceió', 'M', ' 8298765577762'),
+('260003', '234569914', 'Maria Clara', '07/03/2006', 'João Pessoa', 'F', '8398766533091');
