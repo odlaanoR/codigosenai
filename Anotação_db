@@ -22,3 +22,27 @@ VALUES
 ('260001', '234569912', 'Ana Tavares', '03/09/1993', 'Fortaleza', 'F', '8591876556478'),
 ('260002', '234569913', 'Cláudio Neves', '04/11/1984', 'Maceió', 'M', ' 8298765577762'),
 ('260003', '234569914', 'Maria Clara', '07/03/2006', 'João Pessoa', 'F', '8398766533091');
+
+CREATE TABLE `clientes` (
+    `id_cliente` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `nome_cliente` varchar(255) DEFAULT NULL,
+    `email_cliente` varchar(255) DEFAULT NULL,
+);
+
+CREATE TABLE `filmes` (
+    `id_filme` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `nome_filme` varchar(255),
+    `genero_filme` varchar(255),
+);
+
+CREATE TABLE `emprestimos` (
+    `id_emprestimo` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id_cliente` int(11),
+    `id_filme` int(11),
+    `data_emprestimo` date,
+    `data_devolucao` date,
+    KEY `id_cliente` (`id_cliente`),
+    KEY `id_filme` (`id_filme`),
+    FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`),
+    FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id_filme`)
+);
