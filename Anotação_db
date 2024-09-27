@@ -46,3 +46,7 @@ CREATE TABLE `emprestimos` (
     FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`),
     FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id_filme`)
 );
+
+só pra eu n esquecer:
+background-color: #000019;
+color: #f0edf0;
