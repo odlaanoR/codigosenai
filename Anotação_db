@@ -52,7 +52,9 @@ INSERT INTO livros (`ID_livro`, `Título`, `Autor`, `Data_Publi`, `Gênero`, `Ed
 VALUES
 ('1980000', 'Dário de um banana: Maré de azar', 'Jeff Kinney', '2013/11/01', 'Humor', 'VR editora'),
 ('1980001', 'Guerra Civil', 'Stuart Moore', '2014/11/24', 'Super-herói', 'Novo Século'),
-('1980002', 'Guerras Secretas', 'Alex Irvine', '2016/01/01', 'Super-herói', 'Novo Século');
+('1980002', 'Guerras Secretas', 'Alex Irvine', '2016/01/01', 'Super-herói', 'Novo Século'),
+('1980004', 'Viagem ao centro da Terra', 'Júlio Verne', '1864/11/25', 'Ficção de Aventura', 'Pierre-Jules Hetzel'),
+('1980005', 'Duna', 'Frank Herbet', '1965/08/01', 'Literatura Fantástica', 'Aleph');
 
 só pra eu n esquecer:
 background-color: #000019;
