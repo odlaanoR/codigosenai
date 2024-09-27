@@ -48,6 +48,12 @@ CREATE TABLE `emprestimos` (
     FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id_filme`)
 );
 
+INSERT INTO livros (`ID_livro`, `Título`, `Autor`, `Data_Publi`, `Gênero`, `Editora`)
+VALUES
+('1980000', 'Dário de um banana: Maré de azar', 'Jeff Kinney', '2013/11/01', 'Humor', 'VR editora'),
+('1980001', 'Guerra Civil', 'Stuart Moore', '2014/11/24', 'Super-herói', 'Novo Século'),
+('1980002', 'Guerras Secretas', 'Alex Irvine', '2016/01/01', 'Super-herói', 'Novo Século');
+
 só pra eu n esquecer:
 background-color: #000019;
 color: #f0edf0;
