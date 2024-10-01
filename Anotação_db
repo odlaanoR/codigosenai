@@ -18,11 +18,13 @@ CREATE TABLE leitores (
 
 INSERT INTO leitores (`ID_leitor`, `RA`, `Nome`, `Data_Nascimento`, `Endereço`, `Sexo`, `Telefone`)
 VALUES
-('2599990', '234569910', 'Ronaldo Cesar', '2007/05/05', 'Paulista', 'M', '8199840781')
+('259999', '234569910', 'Ronaldo Cesar', '2007/05/05', 'Paulista', 'M', '8199840781')
 ('260000', '234569911', 'Benjamin Schnaiguistaiguer', '1948/02/29', 'Pomerode', 'M', '47918276543'),
 ('260001', '234569912', 'Ana Tavares', '1993/03/08', 'Fortaleza', 'F', '8591876556478'),
 ('260002', '234569913', 'Cláudio Neves', '1984/11/04', 'Maceió', 'M', ' 8298765577762'),
 ('260003', '234569914', 'Maria Clara', '1006/07/03', 'João Pessoa', 'F', '8398766533091');
+
+('1980010', 'Ordem Paranormal RPG', 'Rafael Lange', '2021/11/27', 'Mistério', 'Jambô');
 
 CREATE TABLE `clientes` (
     `id_cliente` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -60,11 +62,29 @@ só pra eu n esquecer:
 background-color: #000019;
 color: #f0edf0;
 
-
 INSERT INTO emprestimos (id_emprestimo, `ID_leitor`, `ID_livro`, data_emprestimo, data_devolucao)
 VALUES
+('1870000', '259999', '1980000', '2024/09/28', '2024/10/28'),
+('1870001', '259999', '1980009', '2024/09/28', '2024/10/28'),
 ('1870002', '260003', '1980001', '2024/09/29', '2024/10/29'),
 ('1870003', '260000', '1980004', '2024/09/29', '2024/10/29'),
 ('1870004', '260000', '1980006', '2024/09/29', '2024/10/29'),
 ('1870005', '260002', '1980005', '2024/09/30', '2024/10/30'),
-('1870006', '260002', '1980008', '2024/10/01', '2024/11/01');
+('1870006', '260002', '1980008', '2024/10/01', '2024/11/01'),
+('1870007', '260001', '1980010', '2024/10/01', '2024/10/20'), 
+('1870008', '260001', '1980007', '2024/10/02', '2024/10/11'),
+('1870009', '260003', '1980002', '2024/10/29', '2024/11/02');
+
+SELECT
+    emprestimos.id_emprestimo,
+    emprestimos.data_emprestimo,
+    emprestimos.data_devolucao,
+    emprestimos.ID_leitor,
+    leitores.Nome,
+    emprestimos.ID_livro,
+    livros.Título
+FROM emprestimos
+INNER JOIN leitores
+ON emprestimos.ID_leitor = leitores.CodLeitor
+INNER JOIN livros
+ON emprestimos.ID_livro = livros.CodLivro;
