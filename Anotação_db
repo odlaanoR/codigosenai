@@ -1,30 +1,42 @@
 CREATE TABLE livros (
-    ID_livro int(11) NOT NULL PRIMARY KEY,
+    CodLivro int(11) NOT NULL PRIMARY KEY,
     Título varchar(255),
     Autor varchar(255),
     Data_Publi varchar(10),
-    Gênero varchar(255)
+    Gênero varchar(255),
+    Editora VARCHAR(255)
 );
 
 CREATE TABLE leitores (
-    ID_leitor int(11) NOT NULL PRIMARY KEY,
+    CodLeitor int(11) NOT NULL PRIMARY KEY,
     RA varchar(9),
     Nome varchar(255),
     Data_Nascimento date,
     Endereço varchar(255),
-    Telefone,
+    Telefone INT(10),
     Sexo varchar(1)
 );
 
+CREATE TABLE `emprestimos` (
+    `id_emprestimo` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `id_leitor` int(11),
+    `id_livro` int(11),
+    `data_emprestimo` date,
+    `data_devolucao` date,
+    KEY `id_cliente` (`id_cliente`),
+    KEY `id_filme` (`id_filme`),
+    FOREIGN KEY (`id_leitor`) REFERENCES `clientes` (`CodLeitor`),
+    FOREIGN KEY (`id_livro`) REFERENCES `filmes` (`CodLivro`)
+);
+
+
 INSERT INTO leitores (`ID_leitor`, `RA`, `Nome`, `Data_Nascimento`, `Endereço`, `Sexo`, `Telefone`)
 VALUES
-('259999', '234569910', 'Ronaldo Cesar', '2007/05/05', 'Paulista', 'M', '8199840781')
+('259999', '234569910', 'Ronaldo Cesar', '2007/05/05', 'Paulista', 'M', '8199840781'),
 ('260000', '234569911', 'Benjamin Schnaiguistaiguer', '1948/02/29', 'Pomerode', 'M', '47918276543'),
 ('260001', '234569912', 'Ana Tavares', '1993/03/08', 'Fortaleza', 'F', '8591876556478'),
 ('260002', '234569913', 'Cláudio Neves', '1984/11/04', 'Maceió', 'M', ' 8298765577762'),
-('260003', '234569914', 'Maria Clara', '1006/07/03', 'João Pessoa', 'F', '8398766533091');
-
-('1980010', 'Ordem Paranormal RPG', 'Rafael Lange', '2021/11/27', 'Mistério', 'Jambô');
+('260003', '234569914', 'Maria Clara', '2006/07/03', 'João Pessoa', 'F', '8398766533091');
 
 CREATE TABLE `clientes` (
     `id_cliente` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -38,17 +50,16 @@ CREATE TABLE `filmes` (
     `genero_filme` varchar(255),
 );
 
-CREATE TABLE `emprestimos` (
-    `id_emprestimo` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `id_cliente` int(11),
-    `id_filme` int(11),
-    `data_emprestimo` date,
-    `data_devolucao` date,
-    KEY `id_cliente` (`id_cliente`),
-    KEY `id_filme` (`id_filme`),
-    FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`),
-    FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id_filme`)
+CREATE TABLE emprestimos (
+    id_emprestimo int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_leitor int(11),
+    id_livro int(11),
+    data_emprestimo date,
+    data_devolucao date,
+    FOREIGN KEY (id_leitor) REFERENCES leitores (CodLeitor),
+    FOREIGN KEY (id_livro) REFERENCES livros (CodLivro)
 );
+
 
 INSERT INTO livros (`ID_livro`, `Título`, `Autor`, `Data_Publi`, `Gênero`, `Editora`)
 VALUES
@@ -57,6 +68,10 @@ VALUES
 ('1980002', 'Guerras Secretas', 'Alex Irvine', '2016/01/01', 'Super-herói', 'Novo Século'),
 ('1980004', 'Viagem ao centro da Terra', 'Júlio Verne', '1864/11/25', 'Ficção de Aventura', 'Pierre-Jules Hetzel'),
 ('1980005', 'Duna', 'Frank Herbet', '1965/08/01', 'Literatura Fantástica', 'Aleph');
+
+
+
+('1980009', 'Ordem Paranormal RPG', 'Rafael Lange', '2021/11/27', 'Mistério', 'Jambô');
 
 só pra eu n esquecer:
 background-color: #000019;
