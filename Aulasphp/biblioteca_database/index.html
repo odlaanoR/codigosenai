@@ -4,45 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca database</title>
-
-    <style>
-    table {
-        text-align: center;
-    }
-
-    label, input {
-        margin-bottom: 5px;
-    }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Biblioteca poggers</h1>
+    <header>
+        <h1>Biblioteca poggers</h1>
+    </header>
     <p>Seja bem-vindo a biblioteca los zokas, aqui vc encontrará de tudo que tem para ler!</p>
 
-    <form action="cadastra-leitores.php" method="post">
+        <form action="cadastra-leitores.php" method="post">
+            <table>
+                <td>
+                    <label for="nome">Nome:</label> <br>
+                    <input type="text" name="nome"> <br>
+                    <label for="dtnasc">Data de Nascimento:</label> <br>
+                    <input type="text" name="dtnasc"> <br>
+                    <label for="telefone">Telefone:</label> <br>
+                    <input type="text" name="telefone"> <br>
+        
+                </td>
+                <td>
+                    <label for="ra">RA:</label> <br>
+                    <input type="text" name="ra"> <br>
+        
+                    <label for="endereco">Endereço:</label> <br>
+                    <input type="text" name="endereco"> <br>
+        
+                    <label for="sexo">Sexo:</label> <br>
+                    <input type="text" name="sexo">
+                </td>
+            </table>
+            <input type="submit" class="botao" value="Enviar" width="5" style="cursor: pointer;">
+        </form>
 
-        <table>
-            <td>
-                <label for="nome">Nome:</label> <br>
-                <input type="text" name="nome"> <br>
-                <label for="dtnasc">Data de Nascimneto</label> <br>
-                <input type="text" name="dtnasc"> <br>
-                <label for="telefone">Telefone:</label> <br>
-                <input type="text" name="telefone"> <br>
-                
-            </td>
-            <td>
-                <label for="ra">RA:</label> <br>
-                <input type="text" name="ra"> <br>
-                
-                <label for="endereco">Endereço:</label> <br>
-                <input type="text" name="endereco"> <br>
-                
-                <label for="sexo">Sexo:</label> <br>
-                <input type="text" name="sexo">
-            </td>
-        </table>
-        <input type="submit" class="botao" value="Enviar" width="5" >
-    </form>
+    <footer>
+        Aluno: Ronaldo Cesar <br>
+        <a href="https://github.com/odlaanoR" target="_blank">Mais Códigos</a>
+    </footer>
 </body>
 </html>
