@@ -23,20 +23,18 @@ CREATE TABLE `emprestimos` (
     `id_livro` int(11),
     `data_emprestimo` date,
     `data_devolucao` date,
-    KEY `id_cliente` (`id_cliente`),
-    KEY `id_filme` (`id_filme`),
-    FOREIGN KEY (`id_leitor`) REFERENCES `clientes` (`CodLeitor`),
-    FOREIGN KEY (`id_livro`) REFERENCES `filmes` (`CodLivro`)
+    FOREIGN KEY (`id_leitor`) REFERENCES `leitores` (`CodLeitor`),
+    FOREIGN KEY (`id_livro`) REFERENCES `livros` (`CodLivro`)
 );
 
 
-INSERT INTO leitores (`ID_leitor`, `RA`, `Nome`, `Data_Nascimento`, `Endereço`, `Sexo`, `Telefone`)
+INSERT INTO leitores (`RA`, `Nome`, `Data_Nascimento`, `Endereço`, `Sexo`, `Telefone`)
 VALUES
-('1', '234569910', 'Ronaldo Cesar', '2007/05/05', 'Paulista', 'M', '8199840781'),
-('2', '234569911', 'Benjamin Schnaiguistaiguer', '1948/02/29', 'Pomerode', 'M', '47918276543'),
-('3', '234569912', 'Ana Tavares', '1993/03/08', 'Fortaleza', 'F', '8591876556478'),
-('4', '234569913', 'Cláudio Neves', '1984/11/04', 'Maceió', 'M', '8298765577762'),
-('5', '234569914', 'Maria Clara', '2006/07/03', 'João Pessoa', 'F', '8398766533091');
+('234569910', 'Ronaldo Cesar', '2007/05/05', 'Paulista', 'M', '8199840781'),
+('234569911', 'Benjamin Schnaiguistaiguer', '1948/02/29', 'Pomerode', 'M', '47918276543'),
+('234569912', 'Ana Tavares', '1993/03/08', 'Fortaleza', 'F', '8591876556478'),
+('234569913', 'Cláudio Neves', '1984/11/04', 'Maceió', 'M', '8298765577762'),
+('234569914', 'Maria Clara', '2006/07/03', 'João Pessoa', 'F', '8398766533091');
 
 CREATE TABLE `clientes` (
     `id_cliente` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -61,18 +59,18 @@ CREATE TABLE emprestimos (
 );
 
 
-INSERT INTO livros (`ID_livro`, `Título`, `Autor`, `Data_Publi`, `Gênero`, `Editora`)
+INSERT INTO livros (`Título`, `Autor`, `Data_Publi`, `Gênero`, `Editora`)
 VALUES
-('1980000', 'Dário de um banana: Maré de azar', 'Jeff Kinney', '2013/11/01', 'Humor', 'VR editora'),
-('1980001', 'Guerra Civil', 'Stuart Moore', '2014/11/24', 'Super-herói', 'Novo Século'),
-('1980002', 'Guerras Secretas', 'Alex Irvine', '2016/01/01', 'Super-herói', 'Novo Século'),
-('1980003', 'Viagem ao centro da Terra', 'Júlio Verne', '2021/02/15', 'Ficção de Aventura', 'FTD'),
-('1980004', 'Duna', 'Frank Herbet', '1965/08/01', 'Literatura Fantástica', 'Aleph'),
-('1980005', 'O pequeno príncipe', '2016/10/31', 'Fábula', 'Nova Fronteira'),
-('1980006, 'Gravity Falls: Journal 3', '2016/07/26','Alex Hirsh e Rob Renzetti', 'Ficção', 'Disney Publishing Worldwide'),
-('1980007', 'Harry Potter e a Pedra Filosofal', '2000/04/10', 'J.K Rowling', 'Literatura Fantástica', 'Rocco'),
-('1980008', 'Vingadores: Todos querem dominar o mundo', '2015/05/05', 'Dan Abnett', 'Super-herói', 'Novo Século'),
-('1980009', 'Ordem Paranormal RPG', 'Rafael Lange', '2021/11/27', 'Mistério', 'Jambô');
+('Dário de um banana: Maré de azar', 'Jeff Kinney', '2013/11/01', 'Humor', 'VR editora'),
+('Guerra Civil', 'Stuart Moore', '2014/11/24', 'Super-herói', 'Novo Século'),
+('Guerras Secretas', 'Alex Irvine', '2016/01/01', 'Super-herói', 'Novo Século'),
+('Viagem ao centro da Terra', 'Júlio Verne', '2021/02/15', 'Ficção de Aventura', 'FTD'),
+('Duna', 'Frank Herbet', '1965/08/01', 'Literatura Fantástica', 'Aleph'),
+('O pequeno príncipe', '2016/10/31', 'Fábula', 'Nova Fronteira'),
+('Gravity Falls: Journal 3', '2016/07/26','Alex Hirsh e Rob Renzetti', 'Ficção', 'Disney Publishing Worldwide'),
+('Harry Potter e a Pedra Filosofal', '2000/04/10', 'J.K Rowling', 'Literatura Fantástica', 'Rocco'),
+('Vingadores: Todos querem dominar o mundo', '2015/05/05', 'Dan Abnett', 'Super-herói', 'Novo Século'),
+('Ordem Paranormal RPG', 'Rafael Lange', '2021/11/27', 'Mistério', 'Jambô');
 
 só pra eu n esquecer:
 background-color: #000019;
@@ -80,16 +78,16 @@ color: #f0edf0;
 
 INSERT INTO emprestimos (id_emprestimo, `ID_leitor`, `ID_livro`, data_emprestimo, data_devolucao)
 VALUES
-('1870000', '259999', '1980000', '2024/09/28', '2024/10/28'),
-('1870001', '259999', '1980009', '2024/09/28', '2024/10/28'),
-('1870002', '260003', '1980001', '2024/09/29', '2024/10/29'),
-('1870003', '260000', '1980004', '2024/09/29', '2024/10/29'),
-('1870004', '260000', '1980006', '2024/09/29', '2024/10/29'),
-('1870005', '260002', '1980005', '2024/09/30', '2024/10/30'),
-('1870006', '260002', '1980008', '2024/10/01', '2024/11/01'),
-('1870007', '260001', '1980010', '2024/10/01', '2024/10/20'), 
-('1870008', '260001', '1980007', '2024/10/02', '2024/10/11'),
-('1870009', '260003', '1980002', '2024/10/29', '2024/11/02');
+('1', '1' '2024/09/28', '2024/10/28'),
+('1', '9', '2024/09/28', '2024/10/28'),
+('5', '2', '2024/09/29', '2024/10/29'),
+('2', '4', '2024/09/29', '2024/10/29'),
+('2', '6', '2024/09/29', '2024/10/29'),
+('4', '5', '2024/09/30', '2024/10/30'),
+('4', '8', '2024/10/01', '2024/11/01'),
+('3', '9', '2024/10/01', '2024/10/20'), 
+('3', '7', '2024/10/02', '2024/10/11'),
+('5', '3', '2024/10/29', '2024/11/02');
 
 SELECT
     emprestimos.id_emprestimo,
