@@ -11,6 +11,10 @@ body {
     padding: 8px;
 }
 
+td, tr  {
+    padding: 7px;
+}
+
 select, input {
     width: 170px;
 }
@@ -39,6 +43,7 @@ header {
     padding: 20px;
     text-align: center;
     color: rgb(53, 177, 188);
+    margin-bottom: 20px;
 }
 footer {
     background: rgb(57, 54, 54);
@@ -64,4 +69,12 @@ img {
 
 .livros {
     margin: 0 auto;
+    overflow: hidden;
+    transition: all step-start .2s;
+}
+
+.livros img:hover {
+    transform: scale(1.2);
+    transition: all step-start .2s;
+    cursor: pointer;
 }
