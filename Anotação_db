@@ -67,9 +67,9 @@ VALUES
 ('Viagem ao centro da Terra', 'Júlio Verne', '2021/02/15', 'Ficção de Aventura', 'FTD'),
 ('Duna', 'Frank Herbet', '1965/08/01', 'Literatura Fantástica', 'Aleph'),
 ('O pequeno príncipe', 'Antoine de Saint-Exupéry', '2016/10/31', 'Fábula', 'Nova Fronteira'),
-('Gravity Falls: Journal 3', '2016/07/26','Alex Hirsh e Rob Renzetti', 'Ficção', 'Disney Publishing Worldwide'),
-('Harry Potter e a Pedra Filosofal', '2000/04/10', 'J.K Rowling', 'Literatura Fantástica', 'Rocco'),
-('Vingadores: Todos querem dominar o mundo', '2015/05/05', 'Dan Abnett', 'Super-herói', 'Novo Século'),
+('Gravity Falls: Journal 3', 'Alex Hirsh e Rob Renzetti', '2016/07/26', 'Ficção', 'Disney Publishing Worldwide'),
+('Harry Potter e a Pedra Filosofal', 'J.K Rowling','2000/04/10', 'Literatura Fantástica', 'Rocco'),
+('Vingadores: Todos querem dominar o mundo', 'Dan Abnett', '2015/05/05', 'Super-herói', 'Novo Século'),
 ('Ordem Paranormal RPG', 'Rafael Lange', '2021/11/27', 'Mistério', 'Jambô');
 
 só pra eu n esquecer:
