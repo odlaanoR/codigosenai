@@ -103,7 +103,13 @@ ON emprestimos.ID_leitor = leitores.CodLeitor
 INNER JOIN livros
 ON emprestimos.ID_livro = livros.CodLivro;
 
-
+CREATE TABLE funcionário (
+    CodFunc INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(255) NOT NULL,
+    CPF VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Senha VARCHAR(255) NOT NULL
+);
 
 <?php
 //Configuração de dados
