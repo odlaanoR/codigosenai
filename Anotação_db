@@ -111,6 +111,12 @@ CREATE TABLE funcionário (
     Senha VARCHAR(255) NOT NULL
 );
 
+INSERT INTO funcionários (Nome, CPF, Email, Senha)
+VALUES
+('Emília Cristina', '17896577862', 'emilia@gmail.com', 'emilia1234'),
+('Otávio Garcia', '92000523894', 'otavio@gmail.com', 'otavio1234'),
+('Rafael Ramos', '72045678891', 'rafael@gmail.com', 'rafael1234);
+
 <?php
 //Configuração de dados
 
@@ -176,4 +182,5 @@ else {
 }
 
 ?>
+
 
