@@ -6,15 +6,20 @@ if (!$conn){
     die("Falha na conexão" . mysqli_connect_error());
 }
 
-$nome = isset($_POST["nome"]) ? addslashes(trim($_POST["nome"])) : FALSE;
-$cpf = isset($_POST["cpf"]) ? addslashes(trim($_POST["cpf"])) : FALSE;
-$email = isset($_POST["email"]) ? addslashes(trim($_POST["email"])) : FALSE;
-$senha = isset($_POST["senha"]) ? md5(trim($_POST["senha"])) : FALSE;
+$email = "$_POST[email]";
+$senha = "$_POST[senha]";
 
-if(!$nome || !$cpf || !$email || !$senha) 
-{
-	echo "Você deve preencher os campos!";
-	exit;
-}
+$sql = mysqli_query($conn, "SELECT * FROM `funcionários` WHERE Email = '$email' AND Senha = '$senha'") or die("parece que houve um erro :(");	
 
+	if (mysqli_num_rows($sql)<=0){
+		echo "<script language='javascript' type='text/javascript'>
+        alert('Login e/ou senha incorretos');window.location
+        .href='form-funcionario.php';</script>";
+        die();	
+	}
+
+	else {
+		setcookie("Email", $email);
+		header("Location: form-cadastra-livros.php");
+	}
 

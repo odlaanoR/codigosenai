@@ -10,7 +10,7 @@
 
 <div class="nav">
         <a href="../index.php"><button>Início</button></a>
-        <a href="livros/form-cadastra-livros.php"><button>Livros</button></a>
+        <a href="../compras/emprestimos.php"><button>Emprestimos</button></a>
     </div>
 
     <header>
@@ -45,9 +45,16 @@
             </td>
          </tr>
         </table>
-        <input type="submit" value="Enviar" style="cursor: pointer
-        ">
+        <input type="submit" value="Enviar" style="cursor: pointer">
 
     </form>
+
+
+    <footer>
+     <p>
+        Aluno: Ronaldo Cesar <br>
+        <a href="https://github.com/odlaanoR" target="_blank">Mais códigos</a>
+     </p>
+    </footer>
 </body>
 </html>

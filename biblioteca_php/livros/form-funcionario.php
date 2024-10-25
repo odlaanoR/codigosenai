@@ -13,22 +13,12 @@
         <table>
             <tr>
                 <td>
-                    <label for="nome">Nome:</label> <br>
-                    <input type="text" name="nome">
-                </td>
-                <td>
-                    <label for="cpf">CPF:</label> <br>
-                    <input type="text" name="cpf">
-                </td>
-            </tr>   
-            <tr>
-                <td>
                     <label for="email">Email</label> <br>
                     <input type="text" name="email">
                 </td>
                 <td>
                     <label for="senha">Senha:</label> <br>
-                    <input type="text" name="Senha">
+                    <input type="text" name="senha">
                 </td>
             </tr>
         </table>
