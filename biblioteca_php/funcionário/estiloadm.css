@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background: rgb(57, 54, 54);
+    padding: 20px;
+    text-align: center;
+    color: rgb(53, 177, 188);
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+    background-color: aqua;
+    border-radius: 7px;
+
+}
+
+button:hover {
+    background-color:  rgb(53, 177, 188);;
+}
+
+.nav {
+    justify-content: flex-end;
+    display: flex;
+    background-color: blueviolet;
+    padding: 14px;
+}
+
+.nav button {
+    margin: 0px 6px 0px 0px;
+    padding: 3px;
+}
+
+a {
+    color: aqua;
+}
+
+a:hover {
+    color: rgb(53, 177, 188);
+}
+
+.leitores {
+
+        border: 2px solid black;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        margin-bottom: 30px;
+}
+
+div button {
+    padding: 11px;
+    margin-bottom: 10px;
+}
+
+
+.livros {
+
+    border: 2px solid black;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.emprestimos {
+    
+        border: 2px solid black;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+}
