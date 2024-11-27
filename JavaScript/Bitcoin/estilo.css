@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background: rgb(44, 43, 43);
+    color: azure;
+}
+header {
+    background: black;
+    color: rgb(255, 174, 0);
+    padding: 10px;
+}
+footer {
+    background: black;
+    color: rgb(255, 174, 0);
+    padding: 8px;
+    margin-top: 16%;
+}
+.caixa {
+    border: 4px solid rgb(238, 189, 28);    
+    margin: 0 auto;
+    margin-top: 12%;
+    width: 42%;
+    padding: 20px;
+}
+
+input {
+    margin-left: 8px;
+}
